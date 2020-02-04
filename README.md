@@ -17,6 +17,7 @@
 if you want to make your application binded to a node (or a labelling set of ones):
 
 ```oc label node $nodeNameHere type=GPU```
+
 ```oc patch dc label-app -p '{"spec":{"template":{"spec":{"nodeSelector":{"type":"GPU"}}}}}'```
 
 Then we can see our application running on the labelled node

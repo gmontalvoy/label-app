@@ -1,0 +1,24 @@
+kind: "List"
+items:
+- apiVersion: "v1"
+  kind: "DeploymentConfig"
+  metadata:
+    name: "test-app"
+  spec:
+    template:
+      metadata:
+        labels:
+          name: "test-app"
+      spec:
+        containers:
+          - name: "test-app"
+            image: "registry.access.redhat.com/rhscl/httpd-24-rhel7:latest"
+            ports:
+              - containerPort: 80
+                name: "http-server"
+    replicas: 1
+    strategy:
+      type: "Rolling"
+    paused: false
+    revisionHistoryLimit: 2
+    minReadySeconds: 0

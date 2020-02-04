@@ -44,3 +44,8 @@ Failing in labelling the node incorrectly will left the resources pending until 
 <unknown>   Warning   FailedScheduling         pod/test-app-3-deploy              0/6 nodes are available: 6 node(s) didn't match node selector.
 <unknown>   Warning   FailedScheduling         pod/test-app-3-deploy              0/6 nodes are available: 6 node(s) didn't match node selector.
 ```
+
+[!]This is not the only method to play with pod deployments and how can they be deployed along the entire cluster.
+
+### REFS:
+[Placing pods on specific nodes using node selectors](https://docs.openshift.com/container-platform/4.3/nodes/pods/nodes-pods-node-selectors.html)

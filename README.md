@@ -3,7 +3,7 @@
 
 ## This app relays on availability of rhscl/httpd-24-rhel7 locally or accesible regitry
 
-* git clone git@github.com:gmontalvoy/label-app.git
+* ```git clone git@github.com:gmontalvoy/label-app.git```
 * Authenticate as you consider.
 * oc create -f dc1.yaml -n $ProjectNameHere
 

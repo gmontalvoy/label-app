@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: label-app
+spec:
+  selector:
+    matchLabels: 
+      app: label-app
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: label-app
+    spec:
+      containers:
+      - name: label-app
+        image: registry.access.redhat.com/rhscl/httpd-24-rhel7
+        ports:
+        - containerPort: 80
+          name: 'sample-app'
